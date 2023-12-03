@@ -1,0 +1,8 @@
+spring.datasource.url=jdbc:postgresql://localhost:5434/reservations
+spring.datasource.username=DATABASE_USERNAME
+spring.datasource.password=DATABASE_PASSWORD
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.generate-ddl = true
+server.error.include-message=always
+spring.thymeleaf.prefix=classpath:/templates/
