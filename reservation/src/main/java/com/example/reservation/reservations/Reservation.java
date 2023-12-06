@@ -1,9 +1,10 @@
 package com.example.reservation.reservations;
 
-
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
+
 @Entity
 @Table
 public class Reservation {
@@ -18,8 +19,11 @@ public class Reservation {
             generator = "reservation_sequence"
     )
     private Long id;
+    @NotNull
     private LocalDateTime reservation_time;
+    @NotNull
     private LocalDateTime reservation_end;
+    @NotNull
     private String title;
 
     public Reservation() {

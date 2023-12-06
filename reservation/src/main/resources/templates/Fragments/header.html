@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="input" th:fragment="header">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" th:href="@{./reservation}">Reservations</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{./reservation/addReservation}">New reservation</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

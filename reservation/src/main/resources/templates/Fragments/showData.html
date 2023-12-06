@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="data" th:fragment="showData">
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Reservation Time</th>
+            <th scope="col">Reservation End</th>
+            <th scope="col">Title</th>
+            <th scope="col">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="reservation : ${reservations}">
+            <td th:text="${reservation.id}"></td>
+            <td th:text="${#temporals.format(reservation.reservation_time, 'yyyy-MM-dd HH:mm:ss')}"></td>
+            <td th:text="${#temporals.format(reservation.reservation_end, 'yyyy-MM-dd HH:mm:ss')}"></td>
+            <td th:text="${reservation.title}"></td>
+            <td>
+                <a th:href="@{./reservation/delete/{id}(id=${reservation.id})}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
